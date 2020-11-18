@@ -1,6 +1,13 @@
 @extends('common/layout')
 
 @section('content')
+
+    <div class="mb-4">
+        <a href="{{ route('posts.create') }}" class="btn btn-primary">
+            投稿を新規作成する
+        </a>
+    </div>
+
     <div class="container mt-4">
         @foreach ($posts as $post)
             <div class="card mb-4">
@@ -23,11 +30,6 @@
                         </span>
                     @endif
 
-                    <div class="mb-4">
-                        <a href="{{ route('posts.create') }}" class="btn btn-primary">
-                            投稿を新規作成する
-                        </a>
-                    </div>
                 </div>
             </div>
         @endforeach
